@@ -22,4 +22,13 @@ describe("jedis model", function () {
       expect(jedis).toHaveLength(2);
     })
   })
+
+  describe("remove()", function(){
+    it("deletes jedi from database", async function(){
+      await Jedis.remove(1)
+
+      const jedis = await db("jedis");
+      expect(jedis).toHaveLength(1)
+    })
+  })
 });

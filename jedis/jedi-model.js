@@ -12,10 +12,10 @@ function get(){
 };
 
 function findById(id){
-    // return db("jedis")
-    // .select("id", "name")
-    // .where({ id })
-    return null;
+    return db("jedis")
+    .select("id", "name")
+    .where({ id })
+    
 };
 
 async function insert(jedi){
@@ -24,8 +24,8 @@ async function insert(jedi){
 };
 
 function remove(id){
-    // return db("jedis")
-    // .where({ id })
-    // .del()
-    return null;
+    return db("jedis")
+    .where({ id })
+    .del()
+    
 };
